@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rubik's cube</title>
+    <style type="text/css">
+        body
+        {
+            background: #EEEEEE;
+            margin: 0;
+        }
+        #container
+        {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+            background: white;
+        }
+        .face-row
+        {
+            display: flex;
+        }
+        .face
+        {
+            /*display: flex;*/
+            flex: .25;
+            /*align-items: center;*/
+            /*justify-content: center;*/
+            margin: 4px;
+            height: 192px;
+            /*background: yellow;*/
+        }
+        .tile-row
+        {
+            display: flex;
+            width: 100%;
+        }
+        .tile
+        {
+            display: flex;
+            flex: 0.33;
+            height: 54px;
+            background: brown;
+            margin: 4px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            border: 1pt solid black;
+        }
+        #t1,#t2,#t3,#t4,#t5,#t6,#t7,#t8,#tw
+        {
+            background: white;
+        }
+        #t9,#t10,#t11,#t12,#t13,#t14,#t15,#t16,#tr
+        {
+            background: red;
+        }
+        #t17,#t18,#t19,#t20,#t21,#t22,#t23,#t24,#tb
+        {
+            background: cyan;
+        }
+        #t25,#t26,#t27,#t28,#t29,#t30,#t31,#t32,#ty
+        {
+            background: yellow;
+        }
+        #t33,#t34,#t35,#t36,#t37,#t38,#t39,#t40,#to
+        {
+            background: orange;
+        }
+        #t41,#t42,#t43,#t44,#t45,#t46,#t47,#t48,#tg
+        {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Rubik's cube</h1>
+        <div class="face-row">
+            <div class="face"></div>
+            <div class="face">
+                <div class="tile-row">
+                    <div class="tile" id="t1">T1</div>
+                    <div class="tile" id="t2">T2</div>
+                    <div class="tile" id="t3">T3</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t8">T8</div>
+                    <div class="tile" id="tw">TW</div>
+                    <div class="tile" id="t4">T4</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t7">T7</div>
+                    <div class="tile" id="t6">T6</div>
+                    <div class="tile" id="t5">T5</div>    
+                </div>
+
+            </div>
+            <div class="face"></div>
+            <div class="face"></div>
+        </div>
+        <div class="face-row">
+            <div class="face">
+                <div class="tile-row">
+                    <div class="tile" id="t9">T9</div>
+                    <div class="tile" id="t10">T10</div>
+                    <div class="tile" id="t11">T11</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t16">T16</div>
+                    <div class="tile" id="tr">TR</div>
+                    <div class="tile" id="t12">T12</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t15">T15</div>
+                    <div class="tile" id="t14">T14</div>
+                    <div class="tile" id="t13">T13</div>    
+                </div>
+            </div>
+            <div class="face">
+                <div class="tile-row">
+                    <div class="tile" id="t17">T17</div>
+                    <div class="tile" id="t18">T18</div>
+                    <div class="tile" id="t19">T19</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t24">T24</div>
+                    <div class="tile" id="tb">TB</div>
+                    <div class="tile" id="t20">T20</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t23">T23</div>
+                    <div class="tile" id="t22">T22</div>
+                    <div class="tile" id="t21">T21</div>    
+                </div>
+            </div>
+            <div class="face">
+                <div class="tile-row">
+                    <div class="tile" id="t33">T33</div>
+                    <div class="tile" id="t34">T34</div>
+                    <div class="tile" id="t35">T35</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t40">T40</div>
+                    <div class="tile" id="to">TO</div>
+                    <div class="tile" id="t36">T36</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t39">T39</div>
+                    <div class="tile" id="t38">T38</div>
+                    <div class="tile" id="t37">T37</div>    
+                </div>
+
+            </div>
+            <div class="face">
+                <div class="tile-row">
+                    <div class="tile" id="t41">T41</div>
+                    <div class="tile" id="t42">T42</div>
+                    <div class="tile" id="t43">T43</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t48">T48</div>
+                    <div class="tile" id="tg">TG</div>
+                    <div class="tile" id="t44">T44</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t47">T47</div>
+                    <div class="tile" id="t46">T46</div>
+                    <div class="tile" id="t46">T45</div>    
+                </div>
+            </div>
+        </div>
+        <div class="face-row">
+            <div class="face"></div>
+            <div class="face">
+                <div class="tile-row">
+                    <div class="tile" id="t25">T25</div>
+                    <div class="tile" id="t26">T26</div>
+                    <div class="tile" id="t27">T27</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t32">T32</div>
+                    <div class="tile" id="ty">TY</div>
+                    <div class="tile" id="t28">T28</div>    
+                </div>
+                <div class="tile-row">
+                    <div class="tile" id="t31">T31</div>
+                    <div class="tile" id="t30">T30</div>
+                    <div class="tile" id="t29">T29</div>    
+                </div>
+            </div>
+            <div class="face"></div>
+            <div class="face"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var R = 100;
+        var G = 200;
+        var O = 300;
+        var B = 400;
+        var W = 500;
+        var Y = 600;
+        var Z = 700;
+
+        var white_inner_orbit  = new Uint32Array([ 1,  2,  3,  4,  5,  6,  7,  8]);
+        var white_outer_orbit  = new Uint32Array([43, 42, 41, 35, 34, 33, 19, 18, 17, 11, 10,  9]);
+
+        var state = new Uint32Array([
+            W, W, W, W, W, W, W, W, 
+            R, R, R, R, R, R, R, R, 
+            B, B, B, B, B, B, B, B, 
+            Y, Y, Y, Y, Y, Y, Y, Y, 
+            O, O, O, O, O, O, O, O, 
+            G, G, G, G, G, G, G, G,
+        ]);
+
+        document.getElementById("t1").style.background = "black";
+        console.log(R);
+/*        var interval;
+        var isIntervalSet = false;
+        var counter = 0;
+        var startTime;
+        var timePeriod = 60;
+        function doFunction(parameter)
+        {
+            var d = new Date();
+            var percentage = 0;
+            if(isIntervalSet)
+            {
+                clearInterval(interval);
+            }
+            else
+            {
+                startTime = d.getTime();
+            }
+            var elapsedTime = Math.round((d.getTime() - startTime)/1000);
+
+            document.getElementById("clickMe").disabled = "disabled";
+            if(elapsedTime < timePeriod)
+            {
+                percentage = Math.round(100*elapsedTime/timePeriod);
+            }
+            else
+            {
+                percentage = 100;
+            }
+            document.getElementById("progress1").style.width = percentage + "%";
+            document.getElementById("status1").innerHTML = percentage + "%";
+
+            console.log((d.getTime() / 1000) + " doFunction called" + counter);
+            if(elapsedTime < timePeriod)
+            {
+                interval = setInterval(doFunction, 500, parameter);
+            }
+            counter = counter + 1;
+            isIntervalSet = true;
+        }*/
+
+    </script>
+</body>
+</html>
